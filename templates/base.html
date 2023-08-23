@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{%block title %}{%endblock title%}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{  url_for('static', filename='css/bootstrap.min.css') }}"/>
+		<link rel="stylesheet" href="{{  url_for('static', filename='css/main.css') }}"/>
+	</head>
+
+	<body class="d-flex flex-column min-vh-100">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+			<div class="container">
+				<!---LOGO--->	
+				<a class="navbar-brand" href="{{  url_for('landing') }}">
+					<h2 class="logo-text">vimeo-album-flask</h2>
+				</a>
+			</div>
+		</nav>
+
+		{%block content %}{%endblock content%}
+
+		<!-- FOOTER -->
+		<footer class="mt-auto py-1">
+			<div class="container">
+				<a href="https://github.com/elliotwebdev/vimeo-album-flask">vimeo-album-flask by Elliot Henriquez</a>
+			</div>
+		</footer>
+
+		<!-- SCRIPTS -->
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="static/js/jquery.js"><\/script>')</script>
+			<script src="/static/js/bootstrap.bundle.min.js"></script>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+			<script src="/static/js/textyle.min.js"></script>
+			<script src="/static/js/main.js"></script>
+
+	</body>
+</html>
